@@ -301,6 +301,7 @@ public class ThreadedBinaryTree {
 		}
 	}
 	
+	
 	/**
 	 * Performs pre-order treeWalk and prints the content of the tree.
 	 */
@@ -315,7 +316,26 @@ public class ThreadedBinaryTree {
 			}
 		}
 	}
-	
+	private void non_RecursivePreOrderWalk(TreeNode x){
+		if(x!=null){
+				TreeNode prev=null;
+			while(x.get_left()!=null){
+				System.out.printf("%s",x.get_data().toString());
+				x=x.get_left();
+			}
+			while(x!=null){
+				if(x.get_left()==null)
+					System.out.printf("%s",x.get_data.toString());
+				prev=x;
+				x=x.get_right;
+				if(x!=null && prev.get_parent==null)
+					while(x.get_left!=null){
+						System.out.printf("%",x.get_data.toString());
+						x=x.get_left();
+					}
+			}
+		}
+	}
 	
 	/**
 	 * Search for the leftmost TreeNode in the specified  subtree.
